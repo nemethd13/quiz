@@ -18,4 +18,16 @@ public class QuestionServiceImpl implements QuestionService {
     public List<Question> findAllQuestions() {
         return questionRepository.findAll();
     }
+
+    @Override
+    public List findThemes() {
+        return questionRepository.findThemes();
+    }
+
+    @Override
+    public List<Question> findQuestionsByTheme(String theme) {
+        return questionRepository.findByTheme(theme);
+    }
+
+
 }
