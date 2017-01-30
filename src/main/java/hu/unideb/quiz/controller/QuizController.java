@@ -46,14 +46,14 @@ public class QuizController {
         return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/result", method = RequestMethod.GET)
-    public ResponseEntity<List<Result>> listResults() {
-        List<Result> results = resultService.listAllResult();
-        if(results.isEmpty()){
-            return new ResponseEntity<List<Result>>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<List<Result>>(results, HttpStatus.OK);
-    }
+//    @RequestMapping(value = "/result", method = RequestMethod.GET)
+//    public ResponseEntity<List<Result>> listResults() {
+//        List<Result> results = resultService.listAllResult();
+//        if(results.isEmpty()){
+//            return new ResponseEntity<List<Result>>(HttpStatus.NO_CONTENT);
+//        }
+//        return new ResponseEntity<List<Result>>(results, HttpStatus.OK);
+//    }
 
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/themes", method = RequestMethod.GET)
@@ -65,14 +65,14 @@ public class QuizController {
         return new ResponseEntity<List>(themes, HttpStatus.OK);
     }
 
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/newuser", method = RequestMethod.POST)
-    public void saveUser(@RequestBody  User newUser) {
-        System.out.println("Creating user: " + newUser.getUserName());
-
-        newUser.setId((long) 10);
-        userService.saveUser(newUser);
-
-
-    }
+//    @CrossOrigin(origins = "*")
+//    @RequestMapping(value = "/newuser", method = RequestMethod.POST)
+//    public void saveUser(@RequestBody  User newUser) {
+//        System.out.println("Creating user: " + newUser.getUserName());
+//
+//        newUser.setId((long) 10);
+//        userService.saveUser(newUser);
+//
+//
+//    }
 }

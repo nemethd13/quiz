@@ -17,24 +17,31 @@ public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Size(max=1000)
     @Column(name = "question", nullable = false)
     private String question;
+
     @Size(max=100)
     @Column(name = "theme", nullable = false)
     private String theme;
+
     @Size(max=200)
     @Column(name = "answerA", nullable = false)
     private String ansA;
+
     @Size(max=200)
     @Column(name = "answerB", nullable = false)
     private String ansB;
+
     @Size(max=200)
     @Column(name = "answerC", nullable = false)
     private String ansC;
+
     @Size(max=200)
     @Column(name = "answerD", nullable = false)
     private String ansD;
+
     @Size(max=200)
     @Column(name = "answerR", nullable = false)
     private String rightAnswer;
