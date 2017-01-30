@@ -36,15 +36,15 @@ public class QuizController {
         return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
     }
 
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/{theme}", method = RequestMethod.GET)
-    public ResponseEntity<List<Question>> listQuestionsByTheme(@PathVariable("theme") String theme) {
-        List<Question> questions = questionService.findQuestionsByTheme(theme);
-        if(questions.isEmpty()){
-            return new ResponseEntity<List<Question>>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
-    }
+//    @CrossOrigin(origins = "*")
+//    @RequestMapping(value = "/{theme}", method = RequestMethod.GET)
+//    public ResponseEntity<List<Question>> listQuestionsByTheme(@PathVariable("theme") String theme) {
+//        List<Question> questions = questionService.findQuestionsByTheme(theme);
+//        if(questions.isEmpty()){
+//            return new ResponseEntity<List<Question>>(HttpStatus.NO_CONTENT);
+//        }
+//        return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
+//    }
 
 //    @RequestMapping(value = "/result", method = RequestMethod.GET)
 //    public ResponseEntity<List<Result>> listResults() {
@@ -55,15 +55,15 @@ public class QuizController {
 //        return new ResponseEntity<List<Result>>(results, HttpStatus.OK);
 //    }
 
-    @CrossOrigin(origins = "*")
-    @RequestMapping(value = "/themes", method = RequestMethod.GET)
-    public ResponseEntity<List> listThemes() {
-        List themes = questionService.findThemes();
-        if(themes.isEmpty()){
-            return new ResponseEntity<List>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<List>(themes, HttpStatus.OK);
-    }
+//    @CrossOrigin(origins = "*")
+//    @RequestMapping(value = "/themes", method = RequestMethod.GET)
+//    public ResponseEntity<List> listThemes() {
+//        List themes = questionService.findThemes();
+//        if(themes.isEmpty()){
+//            return new ResponseEntity<List>(HttpStatus.NO_CONTENT);
+//        }
+//        return new ResponseEntity<List>(themes, HttpStatus.OK);
+//    }
 
 //    @CrossOrigin(origins = "*")
 //    @RequestMapping(value = "/newuser", method = RequestMethod.POST)

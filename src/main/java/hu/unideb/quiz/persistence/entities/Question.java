@@ -11,11 +11,11 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table( name = "QUESTION")
+@Table( name = "question")
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Size(max=1000)
