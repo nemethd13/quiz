@@ -13,6 +13,13 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void saveUser(User newUser) {
+
+
         userRepository.saveAndFlush(newUser);
+    }
+
+    @Override
+    public User getUserByUsernameAndPassword(String un, String pw) {
+        return userRepository.findByUserNameAndPassWord(un, pw);
     }
 }

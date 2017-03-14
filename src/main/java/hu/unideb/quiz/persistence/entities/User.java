@@ -11,12 +11,16 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "USER")
+@Table(name = "users")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Size(min=3, max=50)
+    @Column(name = "email", nullable = false)
+    private String email;
 
     @Size(min=3, max=50)
     @Column(name = "username", nullable = false)
@@ -26,9 +30,7 @@ public class User {
     @Column(name = "password", nullable = false)
     private String passWord;
 
-    @Size(min=3, max=50)
-    @Column(name = "email", nullable = false)
-    private String email;
+
 
     public Long getId() {
         return id;

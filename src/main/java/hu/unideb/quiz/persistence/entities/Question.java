@@ -27,23 +27,23 @@ public class Question {
     private String theme;
 
     @Size(max=200)
-    @Column(name = "answerA", nullable = false)
+    @Column(name = "answera", nullable = false)
     private String ansA;
 
     @Size(max=200)
-    @Column(name = "answerB", nullable = false)
+    @Column(name = "answerb", nullable = false)
     private String ansB;
 
     @Size(max=200)
-    @Column(name = "answerC", nullable = false)
+    @Column(name = "answerc", nullable = false)
     private String ansC;
 
     @Size(max=200)
-    @Column(name = "answerD", nullable = false)
+    @Column(name = "answerd", nullable = false)
     private String ansD;
 
     @Size(max=200)
-    @Column(name = "answerR", nullable = false)
+    @Column(name = "answerr", nullable = false)
     private String rightAnswer;
 
     public Long getId() {

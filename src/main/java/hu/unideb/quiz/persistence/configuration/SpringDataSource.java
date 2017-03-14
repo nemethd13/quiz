@@ -16,8 +16,8 @@ public class SpringDataSource {
     @Value("${datasource.serverName}")
     private String serverName;
 
-    @Value("${datasource.port}")
-    private Integer port;
+//    @Value("${datasource.port}")
+//    private Integer port;
 
     @Value("${datasource.database}")
     private String database;
@@ -32,12 +32,12 @@ public class SpringDataSource {
     @Bean
     public DataSource createDataSource() {
         PGPoolingDataSource dataSource = new PGPoolingDataSource();
-        dataSource.setServerName(serverName);
-        dataSource.setPortNumber(port);
-        dataSource.setDatabaseName(database);
-
-        dataSource.setUser(user);
-        dataSource.setPassword(password);
+        dataSource.setServerName("localhost");
+        dataSource.setPortNumber(5432);
+        dataSource.setDatabaseName("quiz");
+        dataSource.setCurrentSchema("quiz");
+        dataSource.setUser("postgres");
+        dataSource.setPassword("Batman1993");
 
         return dataSource;
     }
